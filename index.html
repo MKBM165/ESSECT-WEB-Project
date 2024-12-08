@@ -252,6 +252,74 @@
           </div>
         </div>
       </section>
+      <section class="section-5-calendar">
+        <div class="calendar-container">
+          <h2 class="heading-tertiary calendar-title"></h2>
+          <div id="calendar"></div>
+          <button class="btn-section-calendar" id="addEventBtn">
+            Ajouter un événement
+          </button>
+          <div id="eventForm" class="event-form">
+            <input class="input-section-calendar" type="date" id="eventDate" />
+            <input
+              class="input-section-calendar"
+              type="text"
+              id="eventTitle"
+              placeholder="Titre de l'événement"
+            />
+            <button class="btn-section-calendar" id="saveEventBtn">
+              Sauvegarder l'événement
+            </button>
+          </div>
+        </div>
+      </section>
+      <section id="forum" class="forum-section">
+        <div class="container-section-5">
+          <h2>Forum de Discussion</h2>
+          <p>
+            Échangez vos idées, posez vos questions et interagissez avec la
+            communauté ESSECT.
+          </p>
+          <div class="forum-actions">
+            <button
+              class="btn-section-5 btn-primary-section-5"
+              onclick="createTopic()"
+            >
+              Créer un nouveau sujet
+            </button>
+            <input
+              type="search"
+              id="search-bar"
+              class="search-bar"
+              placeholder="Rechercher un sujet..."
+              oninput="filterCategories()"
+            />
+          </div>
+          <div id="forum-categories" class="forum-categories">
+            <div class="category-card" data-category="académique">
+              <h3>Questions Académiques</h3>
+              <p>Discutez des cours, des examens et des projets académiques.</p>
+              <a href="#" class="btn-section-5 btn-secondary-section-5"
+                >Voir les discussions</a
+              >
+            </div>
+            <div class="category-card" data-category="clubs">
+              <h3>Clubs & Activités</h3>
+              <p>Participez aux débats sur les clubs et la vie étudiante.</p>
+              <a href="#" class="btn-section-5 btn-secondary-section-5"
+                >Voir les discussions</a
+              >
+            </div>
+            <div class="category-card" data-category="événements">
+              <h3>Événements</h3>
+              <p>Parlez des événements à venir et partagez vos expériences.</p>
+              <a href="#" class="btn-section-5 btn-secondary-section-5"
+                >Voir les discussions</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>
