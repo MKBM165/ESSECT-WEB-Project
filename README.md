@@ -26,7 +26,7 @@ This project was created as a hands-on exercise to apply and refine skills in **
 ## 🛠️ Technologies Used
 - **HTML5** for structure.
 - **CSS3** for styling and layout.
-- **JavaScript** for interactivity (if applicable).
+- **JavaScript** for interactivity .
 - **Typography:** Emphasis on clean and readable font combinations.
 - **Color Scheme:** Carefully selected colors to align with ESSECT's branding.
 
