@@ -43,4 +43,4 @@ This project was created as a hands-on exercise to apply and refine skills in **
 ## 🚀 Getting Started
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/essect-website.git
+   git clone https://github.com/MKBM165/ESSECT-WEB-Project.git
