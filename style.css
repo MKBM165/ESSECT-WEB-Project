@@ -34,6 +34,9 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   line-height: 1;
+  --sb-track-color: #232e33;
+  --sb-thumb-color: #1c7ed6;
+  --sb-size: 8px;
 }
 html {
   font-size: 62.5%;
@@ -146,6 +149,10 @@ html {
   padding: 4.8rem 0 3.2rem 0;
 }
 .section-plan {
+  background-color: #f5faff;
+  padding: 4.6rem;
+}
+.section-forum {
   background-color: #f5faff;
   padding: 4.6rem;
 }
@@ -444,122 +451,85 @@ html {
 /* ********************************* */
 /* SECTION 5 - Forum Section Styling */
 /* ********************************* */
-.forum-section {
-  padding: 60px 20px;
-  text-align: center;
-  background: linear-gradient(120deg, #4e54c8, #8f94fb);
-  color: #fff;
-}
-
-.forum-section h2 {
-  font-size: 2.8rem;
-  margin-bottom: 25px;
-  font-weight: 700;
-}
-
-.forum-section p {
-  font-size: 1.4rem;
-  margin-bottom: 35px;
-  color: #f4f4f4;
-}
-
-.forum-actions {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 50px;
-}
-
-.search-bar {
-  padding: 12px;
-  border-radius: 8px;
-  border: none;
-  width: 300px;
-  outline: none;
-  transition: all 0.3s ease;
-  font-size: 1.4rem;
-}
-
-.search-bar:focus {
-  width: 350px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-}
-
-.btn-section-5 {
-  border: none;
-  padding: 12px 25px;
-  border-radius: 8px;
-  color: #fff;
-  cursor: pointer;
-  font-size: 1.4rem;
-  transition: background-color 0.3s ease;
-}
-
-.btn-primary-section-5 {
-  background-color: #ff6b6b;
-}
-
-.btn-primary-section-5:hover {
-  background-color: #ff5252;
-}
-
-.btn-secondary-section-5 {
-  background-color: #4e54c8;
-  text-decoration: none;
-  display: block;
+.section-forum h2 {
   text-align: center;
 }
-
-.btn-secondary-section-5:hover {
-  background-color: #373eac;
-}
-
-.forum-categories {
+.chat-box {
+  margin: 4.6rem auto;
+  padding: 0.6rem;
+  width: 700px;
+  height: 500px;
+  border: 3px solid #1c7ed6;
+  border-radius: 20px;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 30px;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.text-box {
+  padding: 2rem 1.6rem;
+  border-radius: 16px;
+  background: #212529;
+  height: 100%;
+  overflow-y: scroll;
 }
 
-.category-card {
-  background: #fff;
-  color: #333;
-  padding: 25px;
-  border-radius: 8px;
-  width: 300px;
-  text-align: left;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  font-size: 1.5rem;
+.text-box::-webkit-scrollbar {
+  width: var(--sb-size);
 }
 
-.category-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+.text-box::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 12px;
 }
 
-.category-card h3 {
+.text-box::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 12px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  .text-box {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
+.input-box {
+  margin: 0.5rem 0;
+  padding: 0.6rem;
+  background-color: #212529;
+  border: 1px solid #333;
+  border-radius: 9px;
+  width: 100%;
+  height: 3.6rem;
+  display: flex;
+  justify-content: space-between;
+}
+.input-field {
+  margin-left: 1rem;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  color: white;
   font-size: 1.6rem;
-  margin-bottom: 10px;
-  color: #003366;
+  line-height: 1.4;
 }
-
-.category-card p {
-  font-size: 1.4rem;
-  color: #666;
+.btn-chat {
+  background-color: transparent;
+  border: none;
 }
-
-.card-link:link,
-.card-link:visited {
-  display: inline-block;
-  margin-top: 10px;
-  font-size: 1.3rem;
-  color: #003366;
-  text-decoration: none;
+.btn-chat svg {
+  vertical-align: middle;
+  color: white;
 }
-
-.card-link:hover,
-.card-link:active {
-  text-decoration: underline;
+.btn-chat svg:hover {
+  cursor: pointer;
+}
+.text-content {
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  transition: transform 1s, opacity 1s;
+}
+.text-hidden {
+  opacity: 0;
+  transform: translateY(8rem);
 }

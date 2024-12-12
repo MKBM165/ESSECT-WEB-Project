@@ -256,50 +256,40 @@
           </div>
         </div>
       </section>
-      <section id="forum" class="forum-section">
-        <div class="container-section-5">
-          <h2>Forum de Discussion</h2>
-          <p>
-            Échangez vos idées, posez vos questions et interagissez avec la
-            communauté ESSECT.
-          </p>
-          <div class="forum-actions">
-            <button
-              class="btn-section-5 btn-primary-section-5"
-              onclick="createTopic()"
-            >
-              Créer un nouveau sujet
-            </button>
-            <input
-              type="search"
-              id="search-bar"
-              class="search-bar"
-              placeholder="Rechercher un sujet..."
-              oninput="filterCategories()"
-            />
+      <section id="forum" class="section-forum">
+        <h2 class="heading-secondary">Feel free to Ask anything</h2>
+        <div class="chat-box">
+          <div class="text-box">
+            <p class="text-content">
+              Person : Ou je peux trouver ma carte etudiant
+            </p>
           </div>
-          <div id="forum-categories" class="forum-categories">
-            <div class="category-card" data-category="académique">
-              <h3>Questions Académiques</h3>
-              <p>Discutez des cours, des examens et des projets académiques.</p>
-              <a href="#" class="btn-section-5 btn-secondary-section-5"
-                >Voir les discussions</a
+          <div class="input-box">
+            <input
+              id="msg"
+              class="input-field"
+              type="text"
+              placeholder="Enter your message here "
+            />
+            <button type="submit" class="btn-chat">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-send-horizontal"
               >
-            </div>
-            <div class="category-card" data-category="clubs">
-              <h3>Clubs & Activités</h3>
-              <p>Participez aux débats sur les clubs et la vie étudiante.</p>
-              <a href="#" class="btn-section-5 btn-secondary-section-5"
-                >Voir les discussions</a
-              >
-            </div>
-            <div class="category-card" data-category="événements">
-              <h3>Événements</h3>
-              <p>Parlez des événements à venir et partagez vos expériences.</p>
-              <a href="#" class="btn-section-5 btn-secondary-section-5"
-                >Voir les discussions</a
-              >
-            </div>
+                <path
+                  d="M3.714 3.048a.498.498 0 0 0-.683.627l2.843 7.627a2 2 0 0 1 0 1.396l-2.842 7.627a.498.498 0 0 0 .682.627l18-8.5a.5.5 0 0 0 0-.904z"
+                />
+                <path d="M6 12h16" />
+              </svg>
+            </button>
           </div>
         </div>
       </section>
