@@ -28,7 +28,7 @@ css-Font :
 Copy :
 ***************************************************************************
 sections :
-          nav: intro-programme-evenement-activite-forum
+          nav: intro-programme-evenement-activite-forum- contact
           header : Titre principal
           Section 1 : À propos de l'ESSECT
           Section 2 : sponcor
@@ -91,5 +91,6 @@ Un espace pour échanger :
 - **Formulaire de contact :** Remplissez vos informations et posez vos questions.  
 - **Adresse :** [Insérer l'adresse de l'ESSECT]  
 - **Téléphone :** [Numéro de contact]  
-- **Email :** [Adresse email officielle]  
+- **Email :** [Adresse email officielle] zone de saisie de msg + type de document 
+contact avec les professeur   
 
