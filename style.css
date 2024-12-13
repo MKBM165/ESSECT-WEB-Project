@@ -25,6 +25,13 @@ shade : #e8f2fb
 /* *************************************************** */
 /* GENERAL CSS */
 /* *************************************************** */
+:root {
+  --sb-track-color: #232e33;
+  --sb-thumb-color: #1c7ed6;
+  --sb-size: 14px;
+  --gradient-primary: linear-gradient(to top left, #00323b, #003869);
+  --gradient-secondary: linear-gradient(to top left, #6741d9, #1c7ed6);
+}
 * {
   margin: 0;
   padding: 0;
@@ -34,9 +41,6 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   line-height: 1;
-  --sb-track-color: #232e33;
-  --sb-thumb-color: #1c7ed6;
-  --sb-size: 8px;
 }
 html {
   font-size: 62.5%;
@@ -479,12 +483,12 @@ html {
 
 .text-box::-webkit-scrollbar-track {
   background: var(--sb-track-color);
-  border-radius: 12px;
+  border-radius: 3px;
 }
 
 .text-box::-webkit-scrollbar-thumb {
   background: var(--sb-thumb-color);
-  border-radius: 12px;
+  border-radius: 3px;
 }
 
 @supports not selector(::-webkit-scrollbar) {
@@ -499,7 +503,7 @@ html {
   border: 1px solid #333;
   border-radius: 9px;
   width: 100%;
-  height: 3.6rem;
+  height: 6rem;
   display: flex;
   justify-content: space-between;
 }
@@ -524,12 +528,92 @@ html {
   cursor: pointer;
 }
 .text-content {
+  display: inline-block;
+  margin-top: 1rem;
   color: #fff;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 1.4;
   transition: transform 1s, opacity 1s;
 }
 .text-hidden {
   opacity: 0;
   transform: translateY(8rem);
+}
+/* ****************************************** */
+/* Footer */
+.footer {
+  padding: 10rem 3rem;
+  background-color: #030d15;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
+.container-footer {
+  justify-self: center;
+}
+.footer__nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+}
+.social-nav {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+  gap: 2rem;
+}
+.footer__item {
+  margin-right: 4rem;
+}
+
+.footer__link {
+  font-size: 1.6rem;
+  color: #eee;
+  text-decoration: none;
+}
+
+.footer__logo {
+  height: 8rem;
+  display: block;
+  margin: 3rem 0;
+}
+
+.social-link {
+  font-size: 1.4rem;
+}
+
+.footer-form-container {
+  background: var(--gradient-primary);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  width: 500px;
+  grid-column: 2;
+  justify-self: center;
+}
+.footer-form {
+  display: grid;
+  gap: 3rem;
+}
+.form-title {
+  color: #fff;
+}
+.footer-form label {
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+.footer-form input {
+  border-radius: 9px;
+  border: none;
+  padding: 1rem;
+  height: 4rem;
+}
+.footer button {
+  transition: all 0.2s;
+}
+.footer button:hover {
+  background: var(--gradient-secondary);
+  color: #fff;
 }
