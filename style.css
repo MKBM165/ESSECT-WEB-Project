@@ -29,8 +29,9 @@ shade : #e8f2fb
   --sb-track-color: #232e33;
   --sb-thumb-color: #1c7ed6;
   --sb-size: 14px;
-  --gradient-primary: linear-gradient(to top left, #00323b, #003869);
+  --gradient-primary: linear-gradient(to top left, #22b8cf, #228be6);
   --gradient-secondary: linear-gradient(to top left, #6741d9, #1c7ed6);
+  --gradient-tertiary: linear-gradient(to top left, #00323b, #003869);
 }
 * {
   margin: 0;
@@ -54,7 +55,10 @@ html {
   height: 5.6rem;
   padding: 0 4.8rem;
   background-color: #f5faff;
+  border-bottom: 1px solid #ddd;
 }
+/* Sticky nav */
+
 .main-nav-list {
   list-style: none;
   display: flex;
@@ -66,7 +70,7 @@ html {
 .main-nav-link:visited {
   text-decoration: none;
   color: #333;
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   font-weight: 500;
   transition: all 0.3s;
   display: inline-block;
@@ -111,7 +115,7 @@ html {
   display: inline-block;
   text-decoration: none;
   font-size: 2rem;
-  padding: 1.6rem 3.2rem;
+  padding: 1rem 3rem;
   border-radius: 9px;
   transition: all 0.5s;
   font-weight: 600;
@@ -122,7 +126,7 @@ html {
 .btn-primary:link,
 .btn-primary:visited {
   color: #fff;
-  background-color: #1c7ed6;
+  background: var(--gradient-primary);
   transition: scale 1s;
 }
 .btn-secondary:link,
@@ -132,14 +136,16 @@ html {
 }
 .btn-primary:hover,
 .btn-primary:active {
-  background-color: #1c7ed6;
+  background: var(--gradient-secondary);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 
   scale: 1.02;
 }
 .btn-secondary:hover,
 .btn-secondary:active {
-  background-color: #e8f2fb;
+  background: var(--gradient-secondary);
+  color: #fff;
+  /* background-color: #e8f2fb; */
   box-shadow: inset 0 0 0 3px #fff;
 }
 /* *************************************************** */
@@ -147,7 +153,8 @@ html {
 /* *************************************************** */
 .section-hero {
   background-color: #f5faff;
-  padding: 4.8rem 0 9.6rem 0;
+  padding: 6rem 0 9.6rem 0;
+  border-bottom: 1px solid #ddd;
 }
 .section-featured {
   padding: 4.8rem 0 3.2rem 0;
@@ -321,24 +328,10 @@ html {
   color: #003366;
 }
 .section-4-hero p {
+  display: block;
+  margin: 4rem;
   font-size: 1.8rem;
   color: #666;
-}
-.cta-button:link,
-.cta-button:visited {
-  display: inline-block;
-  margin: 3rem;
-  padding: 10px 20px;
-  font-size: 1.8rem;
-  color: #fff;
-  background-color: #003366;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-.cta-button:hover,
-.cta-button:active {
-  background-color: #005599;
 }
 
 /* Clubs Grid */
@@ -439,17 +432,23 @@ html {
 }
 
 .btn-section-calendar {
+  font-size: 2rem;
   margin-top: 5rem;
   padding: 10px;
   background-color: #1c7ed6;
-  color: white;
+  font-weight: 600;
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  color: #fff;
+  background: var(--gradient-primary);
+  transition: scale 1s;
+  transition: all 0.5s;
 }
 
 .btn-section-calendar:hover {
-  background-color: #1175b0;
+  background: var(--gradient-secondary);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* ********************************* */
@@ -528,13 +527,14 @@ html {
   cursor: pointer;
 }
 .text-content {
-  display: inline-block;
+  display: block;
   margin-top: 1rem;
   color: #fff;
   font-size: 1.8rem;
   line-height: 1.4;
   transition: transform 1s, opacity 1s;
 }
+
 .text-hidden {
   opacity: 0;
   transform: translateY(8rem);
@@ -585,7 +585,7 @@ html {
 }
 
 .footer-form-container {
-  background: var(--gradient-primary);
+  background: var(--gradient-tertiary);
   padding: 20px;
   border-radius: 10px;
   color: white;

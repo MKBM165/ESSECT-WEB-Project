@@ -109,3 +109,29 @@ addEventBtn.addEventListener("click", () => {
     eventFormEl.style.display === "block" ? "none" : "block";
 });
 renderCalendar();
+// chat
+
+function chat() {
+  let msg = document.getElementById("msg");
+  const container = document.querySelector(".text-box");
+  const newMessage = document.createElement("p");
+  newMessage.classList.add("text-content", "text-hidden");
+  newMessage.innerHTML = `You: ${msg.value} `;
+  container.appendChild(newMessage);
+  setTimeout(() => {
+    newMessage.classList.remove("text-hidden");
+  }, 25);
+  msg.value = "";
+}
+// Example Usage:
+const send = document.querySelector(".btn-chat");
+send.addEventListener("click", function (e) {
+  e.preventDefault();
+  chat();
+});
+window.addEventListener("keydown", function (e) {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    chat();
+  }
+});
