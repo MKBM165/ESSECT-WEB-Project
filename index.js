@@ -113,15 +113,17 @@ renderCalendar();
 
 function chat() {
   let msg = document.getElementById("msg");
-  const container = document.querySelector(".text-box");
-  const newMessage = document.createElement("p");
-  newMessage.classList.add("text-content", "text-hidden");
-  newMessage.innerHTML = `You: ${msg.value} `;
-  container.appendChild(newMessage);
-  setTimeout(() => {
-    newMessage.classList.remove("text-hidden");
-  }, 25);
-  msg.value = "";
+  if (msg.value != "") {
+    const container = document.querySelector(".text-box");
+    const newMessage = document.createElement("p");
+    newMessage.classList.add("text-content", "text-hidden");
+    newMessage.innerHTML = `You: ${msg.value} `;
+    container.appendChild(newMessage);
+    setTimeout(() => {
+      newMessage.classList.remove("text-hidden");
+    }, 25);
+    msg.value = "";
+  }
 }
 // Example Usage:
 const send = document.querySelector(".btn-chat");
@@ -152,3 +154,11 @@ const stickyNav = function (entrys) {
 const hero = document.querySelector(".section-hero");
 const heroObserver = new IntersectionObserver(stickyNav, obsOptions);
 heroObserver.observe(hero);
+//forum
+const contactBtn = document.querySelector(".btn-contact");
+const inputName = document.querySelector(".input-name");
+const inputEmail = document.querySelector(".input-email");
+contactBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  alert("check your email we will send you the needed documents");
+});
