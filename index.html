@@ -32,8 +32,8 @@
     <script defer src="index.js"></script>
   </head>
   <body>
-    <header class="header">
-      <a href="#">
+    <header class="header sticky">
+      <a href="#top">
         <img
           src="img/logo essect without bg.png"
           alt="logo de ESSECT"
@@ -73,6 +73,7 @@
           </div>
           <div class="hero-image-box">
             <img
+              loading="lazy"
               class="hero-img"
               src="img/Essect 3 img.png"
               alt="3 images sur l ESSECT classe,jardin de l'ESSECT"
@@ -218,7 +219,7 @@
         <div id="clubs" class="clubs-grid">
           <!-- Club Card 1 -->
           <div class="club-card">
-            <img src="img/club1.png" alt="Club Junior ESSECT" />
+            <img loading="lazy" src="img/club1.png" alt="Club Junior ESSECT" />
             <h3>Club Junior ESSECT</h3>
             <p>
               Explorez vos compétences entrepreneuriales avec des projets
@@ -228,14 +229,14 @@
           </div>
           <!-- Club Card 2 -->
           <div class="club-card">
-            <img src="img/club2.jpeg" alt="Club Sportif" />
+            <img loading="lazy" src="img/club2.jpeg" alt="Club Sportif" />
             <h3>Club Sportif</h3>
             <p>Participez à nos compétitions sportives interuniversitaires.</p>
             <a href="#" class="card-link">En savoir plus</a>
           </div>
           <!-- Club Card 3 -->
           <div class="club-card">
-            <img src="img/club3.jpeg" alt="Club Culturel" />
+            <img loading="lazy" src="img/club3.jpeg" alt="Club Culturel" />
             <h3>Club Culturel</h3>
             <p>Célébrez l’art et la culture avec des événements uniques.</p>
             <a href="#" class="card-link">En savoir plus</a>
@@ -310,16 +311,37 @@
         <div class="container">
           <h2 class="heading-featured-in">As featured in</h2>
           <div class="logos">
-            <img src="img/Sponcor Essect/BANKABC.jpg" alt="BANKABC logo" />
             <img
+              loading="lazy"
+              src="img/Sponcor Essect/BANKABC.jpg"
+              alt="BANKABC logo"
+            />
+            <img
+              loading="lazy"
               src="img/Sponcor Essect/GrantThornton.jpg"
               alt="GrantThornton logo"
             />
-            <img src="img/Sponcor Essect/INCOM.jpg" alt="INCOM logo" />
-            <img src="img/Sponcor Essect/ITG.jpg" alt="ITG" />
-            <img src="img/Sponcor Essect/OMC.jpg" alt="OMC logo" />
-            <img src="img/Sponcor Essect/REDSTART.png" alt="REDSTART logo" />
-            <img src="img/Sponcor Essect/TAEF.jpg" alt="TAEF logo" />
+            <img
+              loading="lazy"
+              src="img/Sponcor Essect/INCOM.jpg"
+              alt="INCOM logo"
+            />
+            <img loading="lazy" src="img/Sponcor Essect/ITG.jpg" alt="ITG" />
+            <img
+              loading="lazy"
+              src="img/Sponcor Essect/OMC.jpg"
+              alt="OMC logo"
+            />
+            <img
+              loading="lazy"
+              src="img/Sponcor Essect/REDSTART.png"
+              alt="REDSTART logo"
+            />
+            <img
+              loading="lazy"
+              src="img/Sponcor Essect/TAEF.jpg"
+              alt="TAEF logo"
+            />
           </div>
         </div>
       </section>
@@ -328,7 +350,10 @@
       <div class="container-footer">
         <div class="logo-col">
           <a href="#top" class="footer__logo"
-            ><img src="img/ESSECT footer_logo.png" alt="logo essect"
+            ><img
+              loading="lazy"
+              src="img/ESSECT footer_logo.png"
+              alt="logo essect"
           /></a>
           <ul class="social-nav">
             <li class="social-item">
@@ -434,9 +459,28 @@
         <h3 class="heading-tertiary form-title">Contactez-nous</h3>
         <form class="footer-form">
           <label for="Full-name">Nom et Prenom</label>
-          <input id="Full-name" type="text" placeholder="Flen Fouleni" />
+          <input
+            id="Full-name"
+            type="text"
+            placeholder="Flen Fouleni"
+            required
+          />
           <label for="email">Email</label>
-          <input id="email" type="email" placeholder="exemple@gmail.com" />
+          <input
+            id="email"
+            type="email"
+            placeholder="exemple@gmail.com"
+            required
+          />
+          <label for="select-demande">Type de demande</label>
+          <select name="" id="select-demande">
+            <option value="">Please choose an option</option>
+            <option value="Document">Un Document</option>
+            <option value="Carte-etudiant">Carte etudiant</option>
+            <option value="admin">Administration</option>
+            <option value="Note">Relevé de Note</option>
+            <option value="podcast">Feuille de presence</option>
+          </select>
           <label for="question">Entrer Votre Question</label>
           <input id="question" type="text" placeholder="Votre Question" />
           <button class="btn" type="submit">Send</button>

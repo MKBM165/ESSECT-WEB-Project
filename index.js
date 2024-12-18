@@ -135,3 +135,20 @@ window.addEventListener("keydown", function (e) {
     chat();
   }
 });
+//Sticky nav
+const header = document.querySelector(".header");
+const obsOptions = {
+  root: null,
+  threshold: 0.2,
+};
+const stickyNav = function (entrys) {
+  const [entry] = entrys;
+  console.log(entry.isIntersecting);
+  entry.isIntersecting
+    ? header.classList.remove("sticky")
+    : header.classList.add("sticky");
+};
+
+const hero = document.querySelector(".section-hero");
+const heroObserver = new IntersectionObserver(stickyNav, obsOptions);
+heroObserver.observe(hero);
